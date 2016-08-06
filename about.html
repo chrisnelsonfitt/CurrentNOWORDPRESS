@@ -35,25 +35,33 @@
 			    </div>
 					<div class="collapse navbar-collapse" id="mainNav">
 						  <ul class="nav navbar-nav">
-						    <li ><a href="shop.html"> Shop</a></li>
-						    <li class="selected"><a href="about.html"> About Us </a></li>
+						    <li class=""><a class="dropdown-toggle" data-toggle="dropdown" href="shop.html"> Shop <span class="caret"></span></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="catagory1.html">Page 1</a></li>
+                                  <li><a href="catagory2.html">Page 2</a></li>
+                                  <li><a href="catagory3.html">Page 3</a></li> 
+                                </ul>
+                              </li>
+						    <li><a href="about.html"> About Us </a></li>
 								<li><a href="blog.html"> Blog </a></li>
-								</li>
+							
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
-							  <li><a href="#"> Login</a></li>
+							  <li><a href="login.html"> Login</a></li>
 							</ul>
 					</div>
 					</div>
-						<h1>About Us</h1>
+						<h1>About</h1>
 				</nav>
 		</header>
 	<main>
 		<div class="spacer"></div>
     <div class="about_container">
 		<div class="identify_wrapper">
-			<h1>Emily Levi</h1>
+
 			<img src="img/sample.jpg">
+            <div class=identify_p>
+                <h1>Emily Levi</h1>
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 				Fusce pretium, dui a egestas ultrices, eros lacus lobortis odio,
@@ -63,20 +71,10 @@
 				sem vel pellentesque consectetur, odio turpis pretium quam, nec
 				auctor diam est vitae magna.
 			</p>
+            </div>
 		</div>
-		<div class="identify_wrapper">
-			<h1>John Muirhead</h1>
-			<img src="img/sample2.jpg">
-			<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-				Fusce pretium, dui a egestas ultrices, eros lacus lobortis odio,
-				et sodales enim urna vel tortor. In iaculis, metus a mattis malesuada,
-				lorem lorem dictum metus, elementum venenatis ligula nisl a velit.
-				Vestibulum porttitor venenatis nunc non interdum. Integer interdum,
-				sem vel pellentesque consectetur, odio turpis pretium quam, nec
-				auctor diam est vitae magna.
-			</p>
-		</div>
+        
+        
 		</div>
 
   </main>
@@ -84,6 +82,7 @@
   <footer>
 
   </footer>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
