@@ -17,21 +17,55 @@ nav{
 		}
 	}
 }
+svg{
+    fill:$pink;
+    height: 20px;
+}
+
+.cart{
+    width:35px;
+    height: 30px;
+}
+
 main{
+    .filter{
+        margin-top: 100px;
+        position: absolute;
+        width:100%;
+        height: 100%;
+        background:rgba(255,245,245,.6);
+        z-index: 2;
+            
+    }
 	#wrapper{
 		padding:5px;
 		position: relative;
-		top:50%;
+		top:100px;
+        width:100%;
+        
+        background:url("../img/main_backdrop.jpeg");
+        background-size:cover;
 		#container{
-			font-family: monospace;;
-			background:$pink;
-			background:url("../img/main_backdrop.jpg");
+            
+			font-family: cursive;
 			background-size:cover;
 			text-align: center;
-			height: 95%;
 			width:100%;
-			margin:50px 0 0 0 ;
+            display: block;
+			margin:200px auto;
 			position: relative;
+            max-width:500px;
+            h3{
+                position: relative;
+                z-index: 3;
+                font-family: 'Bad Script', cursive;
+                font-size: 3rem;
+                line-height:50px;
+                font-weight: 800;
+                color:lighten($charcoal, 15%);
+                
+            }
+          
 		}
 	}
 .spacer{
@@ -182,13 +216,15 @@ width:90%;
     align-items: center;
     flex-flow: wrap;
     margin: auto;
+    
     .catalog_index_item{
         background:url("../img/books.jpg") ;
         background-size: contain;
         height: 255px;
         position: relative;
         z-index:0;
-        width:calc(100%/4);
+        width:calc(99%/4);
+        margin:1px;
     
         .catalog_filter{
              z-index:0;
@@ -212,6 +248,13 @@ footer{
 	height: 300px;
 	background:$sidebar;
     clear:both;
+    display: flex;
+    
+    
+    #footer_footer{
+       width:33%;
+        
+    }
 }
 
 .selected{
