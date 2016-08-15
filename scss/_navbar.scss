@@ -1,0 +1,25 @@
+.navbar-default {
+    background:lighten($pink, 25%);
+    border-bottom:solid 1px lighten($pink, 25%) ;
+}
+
+nav{
+	h1{
+		margin-left: 15px;
+	}
+	ul{
+		list-style: none;
+		li{
+			display:inline-block;
+		}
+	}
+}
+svg{
+    fill:$pink;
+    height: 20px;
+}
+
+.cart{
+    width:35px;
+    height: 30px;
+}

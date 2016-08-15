@@ -1,0 +1,45 @@
+.about_container{
+        width:100%;
+        height: auto;
+        .identify_wrapper{
+        border-bottom: solid $sidebar 2px;
+        padding:20px;
+        min-height: 400px;
+        @media (min-width:860px){
+              max-width: 800px;
+              display: block;
+              margin: auto ;
+        }
+        img{
+
+            display: block;
+            margin:auto;
+            width:250px;
+            border-radius: 100%;
+            @media (min-width:860px){
+                margin:10 auto 25;
+                float:left;
+            }
+        }
+        h1{
+            text-align: left;
+            margin-bottom: 0px;
+        }
+        .identify_p{
+            padding:15px;
+            display: block;
+            margin: auto;
+               :last-child{
+                 border-top: solid $sidebar 2px;
+              }
+             @media (min-width:860px){
+                float:right;
+                max-width:500px;
+            }
+            p{
+                padding-top: 10px;
+                font-size:1.5rem;
+            }
+        }
+    }
+}

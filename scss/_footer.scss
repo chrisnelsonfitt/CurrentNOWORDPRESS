@@ -1,0 +1,59 @@
+footer{
+    text-align: center;
+    position: relative;
+    margin-top: 99px;
+    width:100%;
+    height: 300px;
+    background:lighten($pink,20%);
+    clear:both;
+    display: flex;
+    z-index: 100;
+    .footer_container{
+        width:100%;
+    }
+    .footer_divide{
+        height: 100%; 
+    }
+    #footer_content_container{
+        margin:calc(50%/2) auto;
+        display: inline-block;
+    }
+    #form_footer{
+        form{
+            display:auto;
+            margin:auto;
+            display:flex;
+            flex-direction: row;
+        input {width:200px; }
+        input[type=submit] {margin-left:-30px; width:55px;}
+        }
+    }
+    #contact_footer{
+        border-left: solid lighten($pink,15%) 2px;
+        line-height: 20px;
+        #footer_content_container{
+            margin:40px;
+            h4{text-align: left;}
+        }
+        
+    }
+    #social_media_footer{
+        border-left: solid lighten($pink,15%) 2px;
+        img{
+            width:40px;
+            margin:5px;
+        }
+        
+    }
+    #true_footer{
+        clear:both;
+        margin-left:5px;
+        border-top: solid lighten($pink,15%) 2px;
+        background:lighten($pink,20%);
+        bottom:0;
+        width:100%;
+        height:40px;
+        margin-left: 15px;
+        
+    }
+}

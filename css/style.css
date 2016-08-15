@@ -1,25 +1,6 @@
 html {
   background: white; }
 
-.navbar-default {
-  background: #f7e7ed;
-  border-bottom: solid 1px #f7e7ed; }
-
-nav h1 {
-  margin-left: 15px; }
-nav ul {
-  list-style: none; }
-  nav ul li {
-    display: inline-block; }
-
-svg {
-  fill: #D986A6;
-  height: 20px; }
-
-.cart {
-  width: 35px;
-  height: 30px; }
-
 main .filter {
   margin-top: 100px;
   position: absolute;
@@ -53,34 +34,76 @@ main #wrapper {
       color: #4f4749; }
 main .spacer {
   margin: 119px auto; }
-main .sidebar {
-  height: 84%;
-  overflow: scroll;
-  direction: rtl;
-  position: fixed;
-  right: 0;
-  text-align: center;
-  display: none; }
-  @media (min-width: 860px) {
-    main .sidebar {
-      display: inherit;
-      float: right;
-      width: 24%;
-      max-width: 300px;
-      background: #e3b8be; }
-      main .sidebar .sidebar_header {
-        margin-top: 10px;
-        border-top: 5px solid #f1d4df;
-        border-bottom: 5px dashed #f1d4df; }
-      main .sidebar .sidebar_item {
-        margin: auto;
-        text-align: left;
-        width: 80%;
-        border-bottom: 2px solid #f1d4df; } }
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap; }
+
+.selected {
+  text-decoration: line-through;
+  pointer-events: none; }
+
+.rotate {
+  /* Safari */
+  -webkit-transform: rotate(-90deg);
+  /* Firefox */
+  -moz-transform: rotate(-90deg);
+  /* IE */
+  -ms-transform: rotate(-90deg);
+  /* Opera */
+  -o-transform: rotate(-90deg);
+  /* Internet Explorer */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+
+.navbar-default {
+  background: #f7e7ed;
+  border-bottom: solid 1px #f7e7ed; }
+
+nav h1 {
+  margin-left: 15px; }
+nav ul {
+  list-style: none; }
+  nav ul li {
+    display: inline-block; }
+
+svg {
+  fill: #D986A6;
+  height: 20px; }
+
+.cart {
+  width: 35px;
+  height: 30px; }
+
+form {
+  display: block;
+  margin: auto;
+  max-width: 700px;
+  padding: 10px; }
+  form label {
+    width: 80%;
+    display: block;
+    margin: auto; }
+  form input, form select {
+    display: block;
+    width: 80%;
+    border-radius: 4px;
+    font-size: .9rem;
+    font-style: italic;
+    height: 35px;
+    color: #444;
+    margin: 7px auto 15px; }
+  form button {
+    display: block;
+    margin: auto; }
+  form p {
+    margin-top: 10px;
+    text-align: center; }
+
 @media (min-width: 860px) {
-  main #blog_container {
+  #blog_container {
     max-width: 75%; } }
-main #blog_container #blog_entry {
+#blog_container #blog_entry {
   width: 90%;
   max-width: 700px;
   display: block;
@@ -89,19 +112,42 @@ main #blog_container #blog_entry {
   text-align: center;
   padding: 25px;
   height: auto; }
-  main #blog_container #blog_entry img {
+  #blog_container #blog_entry img {
     width: 80%;
     height: 30%;
     border-radius: 5px;
     margin-bottom: 25px; }
-  main #blog_container #blog_entry h1 {
+  #blog_container #blog_entry h1 {
     text-align: left; }
-main #blog_entry:last-of-type {
+
+#blog_entry:last-of-type {
   border-bottom: none; }
-main #about_container {
-  display: block;
-  width: 500px;
-  margin: 50px auto; }
+
+.catalog_index {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: wrap;
+  margin: auto; }
+  .catalog_index .catalog_index_item {
+    background: url("../img/books.jpg");
+    background-size: contain;
+    height: 255px;
+    position: relative;
+    z-index: 0;
+    width: calc(99%/4);
+    margin: 1px; }
+    .catalog_index .catalog_index_item .catalog_filter {
+      z-index: 0;
+      height: 100%;
+      position: absolute;
+      width: calc(100%/4);
+      background: rgba(244, 244, 244, 0.3); }
+    .catalog_index .catalog_index_item h2 {
+      z-index: 1;
+      color: #272324;
+      text-align: center;
+      line-height: 305px; }
 
 .container {
   width: 100%; }
@@ -161,36 +207,30 @@ main #about_container {
         padding-top: 10px;
         font-size: 1.5rem; }
 
-.flex {
-  display: flex;
-  flex-direction: row;
-  flex-flow: wrap; }
-
-.catalog_index {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  flex-flow: wrap;
-  margin: auto; }
-  .catalog_index .catalog_index_item {
-    background: url("../img/books.jpg");
-    background-size: contain;
-    height: 255px;
-    position: relative;
-    z-index: 0;
-    width: calc(99%/4);
-    margin: 1px; }
-    .catalog_index .catalog_index_item .catalog_filter {
-      z-index: 0;
-      height: 100%;
-      position: absolute;
-      width: calc(100%/4);
-      background: rgba(244, 244, 244, 0.3); }
-    .catalog_index .catalog_index_item h2 {
-      z-index: 1;
-      color: #272324;
-      text-align: center;
-      line-height: 305px; }
+.sidebar {
+  height: 84%;
+  overflow: scroll;
+  direction: rtl;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  display: none; }
+  @media (min-width: 860px) {
+    .sidebar {
+      display: inherit;
+      float: right;
+      width: 24%;
+      max-width: 300px;
+      background: #e3b8be; }
+      .sidebar .sidebar_header {
+        margin-top: 10px;
+        border-top: 5px solid #f1d4df;
+        border-bottom: 5px dashed #f1d4df; }
+      .sidebar .sidebar_item {
+        margin: auto;
+        text-align: left;
+        width: 80%;
+        border-bottom: 2px solid #f1d4df; } }
 
 footer {
   text-align: center;
@@ -240,46 +280,5 @@ footer {
     width: 100%;
     height: 40px;
     margin-left: 15px; }
-
-.selected {
-  text-decoration: line-through;
-  pointer-events: none; }
-
-.rotate {
-  /* Safari */
-  -webkit-transform: rotate(-90deg);
-  /* Firefox */
-  -moz-transform: rotate(-90deg);
-  /* IE */
-  -ms-transform: rotate(-90deg);
-  /* Opera */
-  -o-transform: rotate(-90deg);
-  /* Internet Explorer */
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
-
-form {
-  display: block;
-  margin: auto;
-  max-width: 700px;
-  padding: 10px; }
-  form label {
-    width: 80%;
-    display: block;
-    margin: auto; }
-  form input, form select {
-    display: block;
-    width: 80%;
-    border-radius: 4px;
-    font-size: .9rem;
-    font-style: italic;
-    height: 35px;
-    color: #444;
-    margin: 7px auto 15px; }
-  form button {
-    display: block;
-    margin: auto; }
-  form p {
-    margin-top: 10px;
-    text-align: center; }
 
 /*# sourceMappingURL=style.css.map */

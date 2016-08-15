@@ -1,0 +1,27 @@
+#blog_container{
+	@media (min-width:860px){	max-width:75%; }
+	#blog_entry{
+		width:90%;
+		max-width:700px;
+	 	display: block;
+		margin:auto;
+		border-bottom: solid 3px $divide;
+		text-align: center;
+		padding:25px;
+		height: auto;
+		img{
+			width:80%;
+			height: 30%;
+			border-radius: 5px;
+			margin-bottom: 25px;
+		}
+		h1{
+			text-align: left;
+		}
+
+
+	}
+}
+	#blog_entry:last-of-type{
+	border-bottom: none;
+}

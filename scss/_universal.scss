@@ -1,32 +1,6 @@
 html{
     background:lighten($pink, 35%);
 }
-.navbar-default {
-    background:lighten($pink, 25%);
-    border-bottom:solid 1px lighten($pink, 25%) ;
-}
-
-nav{
-	h1{
-		margin-left: 15px;
-	}
-	ul{
-		list-style: none;
-		li{
-			display:inline-block;
-		}
-	}
-}
-svg{
-    fill:$pink;
-    height: 20px;
-}
-
-.cart{
-    width:35px;
-    height: 30px;
-}
-
 main{
     .filter{
         margin-top: 100px;
@@ -35,18 +9,15 @@ main{
         height: 100%;
         background:rgba(255,245,245,.6);
         z-index: 2;
-
     }
 	#wrapper{
 		padding:5px;
 		position: relative;
 		top:100px;
         width:100%;
-
         background:url("../img/main_backdrop.jpeg");
         background-size:cover;
 		#container{
-
 			font-family: cursive;
 			background-size:cover;
 			text-align: center;
@@ -63,275 +34,37 @@ main{
                 line-height:50px;
                 font-weight: 800;
                 color:lighten($charcoal, 15%);
-
             }
-
 		}
 	}
-.spacer{
-	margin:119px auto ;
-}
-.sidebar{
-		height: 84%;
-		overflow: scroll;
-		direction:rtl;
-		position: fixed;
-		right:0;
-		text-align: center;
-		display: none;
-	  @media (min-width:860px){
-			display: inherit;
-			float:right;
-			width:24%;
-			max-width:300px;
-			background: lighten( $coral, 25%);
-			.sidebar_header{
-				margin-top:10px;
-				border-top: 5px solid lighten( $pink, 20%);
-				border-bottom: 5px dashed lighten( $pink, 20%);
-			}
-			.sidebar_item{
-				margin:auto;
-				text-align: left;
-				width:80%;
-                border-bottom: 2px solid lighten( $pink, 20%);
-			}
-		}
-}
-#blog_container{
-	@media (min-width:860px){	max-width:75%; }
-	#blog_entry{
-		width:90%;
-		max-width:700px;
-	 	display: block;
-		margin:auto;
-		border-bottom: solid 3px $divide;
-		text-align: center;
-		padding:25px;
-		height: auto;
-		img{
-			width:80%;
-			height: 30%;
-			border-radius: 5px;
-			margin-bottom: 25px;
-		}
-		h1{
-			text-align: left;
-		}
-
-
-	}
-}
-	#blog_entry:last-of-type{
-	border-bottom: none;
-}
-#about_container{
-display:block;
-width:500px;
-margin:50px auto;
-}
-}
-.container{
-width:100%;
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
-}
-
-}
-.shop-item-container{
-
-	background:lighten( $pink, 30%);
-	margin:5px;
-
-
-img{
-	display: block;
-	margin: 10px auto;
-width:90%;
-}
-
-}
-
-.about_container{
-	width:100%;
-    height: auto;
-
-    .identify_wrapper{
-          border-bottom: solid $sidebar 2px;
-        padding:20px;
-        min-height: 400px;
-      @media (min-width:860px){
-          max-width: 800px;
-          display: block;
-          margin: auto ;
-
-
-
-        }
-    img{
-
-        display: block;
-        margin:auto;
-        width:250px;
-        border-radius: 100%;
-         @media (min-width:860px){
-            margin:10 auto 25;
-            float:left;
-        }
-        }
-        h1{
-            text-align: left;
-            margin-bottom: 0px;
-        }
-    .identify_p{
-         padding:15px;
-        display: block;
-        margin: auto;
-           :last-child{
-             border-top: solid $sidebar 2px;
-          }
-         @media (min-width:860px){
-           float:right;
-             max-width:500px;
-        }
-        p{
-            padding-top: 10px;
-            font-size:1.5rem;
-        }
+    .spacer{
+        margin:119px auto ;
     }
 }
-}
+
+
 .flex{
     display: flex;
     flex-direction: row;
     flex-flow: wrap;
 }
 
-.catalog_index{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-flow: wrap;
-    margin: auto;
-
-    .catalog_index_item{
-        background:url("../img/books.jpg") ;
-        background-size: contain;
-        height: 255px;
-        position: relative;
-        z-index:0;
-        width:calc(99%/4);
-        margin:1px;
-
-        .catalog_filter{
-             z-index:0;
-            height: 100%;
-            position: absolute;
-            width:calc(100%/4);
-            background:rgba(244,244,244,.3);
-        }
-        h2{
-             z-index:1;
-            color:$charcoal;
-            text-align:center;
-            line-height: 305px;
-        }
-    }
-}
-
-footer{
-    text-align: center;
-    position: relative;
-    margin-top: 99px;
-    width:100%;
-    height: 300px;
-    background:lighten($pink,20%);
-    clear:both;
-    display: flex;
-    z-index: 100;
-
-
-    .footer_container{
-        width:100%;
-    }
-    .footer_divide{
-       
-        height: 100%;
-        
-    }
-    #footer_content_container{
-        margin:calc(50%/2) auto;
-        display: inline-block;
-    }
-    #form_footer{
-        form{
-            display:auto;
-            margin:auto;
-            display:flex;
-            flex-direction: row;
-        input {width:200px; }
-        input[type=submit] {margin-left:-30px; width:55px;}
-        }
-    }
-    #contact_footer{
-       border-left: solid lighten($pink,15%) 2px;
-        line-height: 20px;
-        #footer_content_container{
-            margin:40px;
-            h4{text-align: left;}
-        }
-        
-    }
-    #social_media_footer{
-    border-left: solid lighten($pink,15%) 2px;
-        img{
-            width:40px;
-            margin:5px;
-        }
-        
-    }
-    #true_footer{
-        clear:both;
-        margin-left:5px;
-        border-top: solid lighten($pink,15%) 2px;
-        background:lighten($pink,20%);
-        bottom:0;
-        width:100%;
-        height:40px;
-        margin-left: 15px;
-        
-    }
-}
 
 .selected{
 	text-decoration: line-through;
-	 pointer-events: none;
+    pointer-events: none;
 }
 
 
-
 .rotate {
-/* Safari */
--webkit-transform: rotate(-90deg);
-
-/* Firefox */
--moz-transform: rotate(-90deg);
-
-/* IE */
--ms-transform: rotate(-90deg);
-
-/* Opera */
--o-transform: rotate(-90deg);
-
-/* Internet Explorer */
-filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }

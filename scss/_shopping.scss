@@ -1,0 +1,56 @@
+.catalog_index{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-flow: wrap;
+    margin: auto;
+    .catalog_index_item{
+        background:url("../img/books.jpg") ;
+        background-size: contain;
+        height: 255px;
+        position: relative;
+        z-index:0;
+        width:calc(99%/4);
+        margin:1px;
+        .catalog_filter{
+             z-index:0;
+            height: 100%;
+            position: absolute;
+            width:calc(100%/4);
+            background:rgba(244,244,244,.3);
+        }
+        h2{
+             z-index:1;
+            color:$charcoal;
+            text-align:center;
+            line-height: 305px;
+        }
+    }
+}
+
+
+.container{
+        width:100%;
+    .row-centered {
+        text-align:center;
+    }
+    .col-centered {
+        display:inline-block;
+        float:none;
+        /* reset the text-align */
+        text-align:left;
+        /* inline-block space fix */
+        margin-right:-4px;
+    }
+}
+
+
+.shop-item-container{
+	background:lighten( $pink, 30%);
+	margin:5px;
+    img{
+	   display: block;
+	   margin: 10px auto;
+        width:90%;
+    }
+}

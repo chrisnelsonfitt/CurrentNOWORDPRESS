@@ -1,0 +1,27 @@
+.sidebar{
+		height: 84%;
+		overflow: scroll;
+		direction:rtl;
+		position: fixed;
+		right:0;
+		text-align: center;
+		display: none;
+	  @media (min-width:860px){
+			display: inherit;
+			float:right;
+			width:24%;
+			max-width:300px;
+			background: lighten( $coral, 25%);
+			.sidebar_header{
+				margin-top:10px;
+				border-top: 5px solid lighten( $pink, 20%);
+				border-bottom: 5px dashed lighten( $pink, 20%);
+			}
+			.sidebar_item{
+				margin:auto;
+				text-align: left;
+				width:80%;
+                border-bottom: 2px solid lighten( $pink, 20%);
+			}
+		}
+}
